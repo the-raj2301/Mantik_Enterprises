@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import About from './components/About'
 import Contact from './components/Contact'
 import StyledMap from './components/StyledMap'
+import Products from './components/Products'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,16 +19,17 @@ function App() {
 
   const size = {
     width: '100vw',
-    height: '300px',
+    height: '400px',
 }
 
   return (
     <>
       <Header />
       <Carousel />
+      <Products />
       <About />
       <Contact />
-      {/* <StyledMap  position={position} size={size}/> */}
+      <StyledMap  position={position} size={size}/>
       <Footer />
     </>
   )

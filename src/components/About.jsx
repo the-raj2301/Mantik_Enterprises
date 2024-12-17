@@ -1,16 +1,42 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  // Intersection Observers for different sections
+  const { ref: titleRef, inView: titleInView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
+  const { ref: textRef, inView: textInView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
+  const { ref: imageRef, inView: imageInView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
   return (
     <div className="m-auto max-w-7xl font-jost px-4 sm:px-6 lg:px-8">
-      <div className="text-center py-5 mt-5">
-        <h1 className="text-4xl md:text-8xl font-bold text-white">
-          About Us
-        </h1>
-        {/* <div className="h-1 m-auto bg-gray-400 rounded mt-2 w-1/3 transition-all duration-300 hover:w-1/2"></div> */}
+      {/* Title Section */}
+      <div
+        ref={titleRef}
+        className={`text-center py-5 mt-5 transition-all duration-1000 ${
+          titleInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        <h1 className="text-4xl md:text-8xl font-bold text-white border-b pb-5 border-gray-700">About Us</h1>
       </div>
 
-      <div className="text-center py-5">
+      {/* Text Section */}
+      <div
+        ref={textRef}
+        className={`text-center py-5 transition-all duration-1000 ${
+          textInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <p className="text-xl sm:text-lg md:text-xl w-full md:w-3/4 lg:w-1/2 m-auto tracking-wide leading-relaxed text-sky-500">
           Shaping spaces with precision and creativity. Highlighting the beauty
           of glass through artful engraving, we redefine elegance in every
@@ -18,10 +44,19 @@ const About = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row py-10 mb-20">
+      {/* Image and Description Section */}
+      <div
+        ref={imageRef}
+        className={`flex flex-col md:flex-row py-10 mb-20 transition-all duration-1000 ${
+          imageInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        {/* Image */}
         <div className="flex justify-center md:w-1/2">
           <img className="w-10/12 rounded-lg" src="./img/bg-h1.jpg" alt="Glass engraving" />
         </div>
+
+        {/* Description */}
         <div className="text-left md:w-1/2 px-4 md:px-10 mt-6 md:mt-0">
           <p className="text-lg tracking-wide leading-normal">
             Welcome to <strong>MANTIK ENTERPRISES</strong>, your trusted
@@ -36,17 +71,17 @@ const About = () => {
             installations, and specialized V-groove engraving, which adds a
             touch of sophistication to any space. Our product portfolio
             includes:
-            </p>
-            <ul className="list-disc ml-6 mt-2">
-              <li>Glass Engraving</li>
-              <li>Clear Float Glass</li>
-              <li>Toughened Glass</li>
-              <li>Extra Clear Glass</li>
-              <li>Fabric Laminated Glass</li>
-              <li>And more...</li>
-            </ul>
-            <br />
-            <p>
+          </p>
+          <ul className="list-disc ml-6 mt-2">
+            <li>Glass Engraving</li>
+            <li>Clear Float Glass</li>
+            <li>Toughened Glass</li>
+            <li>Extra Clear Glass</li>
+            <li>Fabric Laminated Glass</li>
+            <li>And more...</li>
+          </ul>
+          <br />
+          <p>
             With a commitment to craftsmanship, attention to detail, and
             exceptional customer service, we work closely with architects,
             designers, and homeowners to bring their visions to life. Whether
