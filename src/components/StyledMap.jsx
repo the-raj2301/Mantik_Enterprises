@@ -26,6 +26,13 @@ const StyledMap = (props) => {
             gestureHandling={'greedy'}
             disableDefaultUI={true}
             mapId={import.meta.env.VITE_GOOGLE_MAPS_API_ID}
+            options={{
+                zoomControl: true, // Enables zoom controls
+                mapTypeControl: true, // Enables map type selector
+                streetViewControl: false, // Enables Street View
+                fullscreenControl: true, // Enables Fullscreen option
+                disableDefaultUI: false, // Enables all default UI controls
+              }}
             />
 
             <AdvancedMarker 

@@ -35,13 +35,13 @@ const Contact = () => {
       );
   };  
   return (
-    <div className="m-auto max-w-7xl font-jost tracking-wide mb-20 px-4 sm:px-10 lg:px-8 text-gray-300">
+    <div id="Contact-Us" className="m-auto max-w-7xl font-jost tracking-wide mb-20 px-4 sm:px-10 lg:px-8 text-gray-300">
       <div className="my-10">
         <h1 className="text-center text-5xl md:text-8xl font-bold text-gray-200 hover:text-white border-b pb-5 border-gray-700">Contact Us</h1>
         <p className="text-center text-2xl sm:text-xl mt-2">We'd <FaRegHeart className="inline"/> to help!</p>
       </div>
 
-      <div className="m-auto md:flex block gap-8">
+      <div className="m-auto lg:flex block gap-8">
 
 
 
@@ -50,7 +50,7 @@ const Contact = () => {
 
 
 
-      <div className="md:w-1/2 w-full px-2 md:pr-10">
+      <div className="lg:w-1/2 w-full px-2 lg:pr-10">
         <h1 className="text-2xl md:text-4xl font-semibold text-white">Get In Touch</h1>
         <div className="text-lg text-gray-400 mt-4 tracking-normal">
           <p>
@@ -68,18 +68,18 @@ const Contact = () => {
             </li>
             {/* Email */}
             <li className="flex items-start gap-5">
-             <span className="text-xl"><MdLocalPhone /></span>
-             <a href="mailto:the.raj2301@gmail.com" className="hover:text-white">the.raj2301@gmail.com</a>
+             <span className="text-xl"><IoMailSharp /></span>
+             <a href="mailto:the.raj2301@gmail.com" className="hover:text-white">mantikenterprises24@gmail.com</a>
             </li>
             {/* Phone */}
             <li className="flex items-start gap-5">
-            <span className="text-xl"><IoMailSharp /></span>
-            <a href="tel:+917738339185" className="hover:text-white">+91 7738339185</a>
+            <span className="text-xl"><MdLocalPhone /></span>
+            <a href="tel:+917738339185" className="hover:text-white">+91 98706 15500</a>
             </li>
           </ul>
         {/* --------------------------------Embadded Google Map--------------------------------------------- */}
 
-        <div className="py-5 w-full">
+        <div className="py-5 w-full hidden lg:block">
           {/* <StyledMap/> */}
           <StyledMap  position={position} size={size}/>
         {/* <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15076.9656598897!2d72.843005!3d19.140907!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7ef1a14676b%3A0xf4396abfcb851114!2sMANTIK%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1733734079693!5m2!1sen!2sin"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */}
@@ -100,8 +100,8 @@ const Contact = () => {
         <form
           ref={form} 
           onSubmit={sendEmail}
-          className="md:w-1/2 w-full px-2 mt-10 md:mt-0">
-          <div className="flex flex-col sm:flex-row lg:flex-row md:flex-col gap-5">
+          className="lg:w-1/2 w-full px-2 mt-10 lg:mt-0">
+          <div className="flex flex-col sm:flex-row lg:flex-row gap-5">
 
 
                {/* ----------------------------------- First Name -------------------------------- */}

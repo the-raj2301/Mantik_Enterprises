@@ -18,7 +18,7 @@ export default function Carousel() {
   return (
     <>
       <Swiper 
-
+      id='Carousel'
       autoplay={{
         delay: 2000,
         disableOnInteraction: false,

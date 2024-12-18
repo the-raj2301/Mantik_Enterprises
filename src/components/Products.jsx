@@ -2,10 +2,10 @@ import React from 'react';
 
 const Card = ({ image, title, subtitle }) => {
   return (
-    <div className='m-auto w-72 bg-[#252526] p-6 rounded-lg font-jost 
-      hover:shadow-[0_4px_20px_rgba(3,196,255,0.3)] hover:scale-105 
+    <div className='w-full bg-[#252526] p-6 rounded-lg font-jost 
+      hover:shadow-[0_4px_20px_#e47025b0] hover:scale-105 
       transition-transform duration-300'>
-      <img className=' h-72 object-cover' src={image} alt={title} />
+      <img className='w-full md:h-64 object-cover rounded-md' src={image} alt={title} loading='lazy'/>
       <h1 className='text-2xl font-bold pt-4 text-white tracking-wide'>{title}</h1>
       <h2 className='text-lg text-gray-400'>{subtitle}</h2>
     </div>
@@ -14,16 +14,16 @@ const Card = ({ image, title, subtitle }) => {
 
 const Products = () => {
   return (
-    <div className="max-w-7xl m-auto pt-10">
+    <div id='Products' className="max-w-7xl m-auto font-jost pt-6">
 
                 {/* Title Section */}
         <div
-            className="text-center py-5 mt-5 transition-all duration-1000"
+            className="text-center p-5 transition-all duration-1000"
         >
             <h1 className="text-4xl md:text-8xl font-bold text-white border-b pb-5 border-gray-700">Products</h1>
         </div>
 
-        <div className='pt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'>
+        <div className='p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'>
 
             {/* Card Section */}
 
@@ -40,32 +40,32 @@ const Products = () => {
             <Card 
             image="./engraving/FLUTED ENGRAVING.png"
             title="Engraved Glass"
-            subtitle="4V Engraving"
+            subtitle="Fluted Engraving"
             />
             <Card 
             image="./engraving/MICRO ENGRAVING.png"
             title="Engraved Glass"
-            subtitle="4V Engraving"
+            subtitle="Micro Engraving"
             />
         <Card 
             image="./engraving/MULTI ENGRAVED TOUGHEN GLASS.png"
             title="Engraved Glass"
-            subtitle="4V Engraving"
+            subtitle="Multi Engraving"
         />
         <Card 
             image="./engraving/ETCHED GLASS.png"
-            title="Engraved Glass"
-            subtitle="4V Engraving"
+            title="Etched Glass"
+            subtitle="Texured Frost"
         />
         <Card 
             image="./engraving/STAR ENGRAVING.png"
-            title="Engraved Glass"
-            subtitle="4V Engraving"
+            title="Brown Mirror"
+            subtitle="Star Engraving"
         />
         <Card 
             image="./engraving/COLOR MIRROR.jpg"
-            title="Engraved Glass"
-            subtitle="4V Engraving"
+            title="Colored Mirror"
+            subtitle="5MM Mirror Beveled Edges"
         />
         </div>
     </div>

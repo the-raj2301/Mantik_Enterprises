@@ -19,7 +19,7 @@ const About = () => {
   });
 
   return (
-    <div className="m-auto max-w-7xl font-jost px-4 sm:px-6 lg:px-8">
+    <div id="About-Us" className="m-auto max-w-7xl font-jost px-4 sm:px-6 lg:px-8">
       {/* Title Section */}
       <div
         ref={titleRef}
@@ -47,17 +47,17 @@ const About = () => {
       {/* Image and Description Section */}
       <div
         ref={imageRef}
-        className={`flex flex-col md:flex-row py-10 mb-20 transition-all duration-1000 ${
+        className={`flex flex-col lg:flex-row py-10 mb-20 transition-all duration-1000 ${
           imageInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         {/* Image */}
-        <div className="flex justify-center md:w-1/2">
+        <div className="flex justify-center lg:w-1/2">
           <img className="w-10/12 rounded-lg" src="./img/bg-h1.jpg" alt="Glass engraving" />
         </div>
 
         {/* Description */}
-        <div className="text-left md:w-1/2 px-4 md:px-10 mt-6 md:mt-0">
+        <div className="text-left lg:w-1/2 px-4 md:px-10 mt-6 lg:mt-0">
           <p className="text-lg tracking-wide leading-normal">
             Welcome to <strong>MANTIK ENTERPRISES</strong>, your trusted
             destination for premium glass solutions and expert engraving

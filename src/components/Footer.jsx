@@ -20,19 +20,19 @@ const Footer = () => {
                 
               <h1 className="text-2xl font-semibold mb-4 tracking-widest">Useful Links</h1>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white">Home</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">About Us</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Services</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Products</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Contact Us</a></li>
+                <li><a href="#Carousel" className="text-gray-400 hover:text-white">Home</a></li>
+                <li><a href="#About-Us" className="text-gray-400 hover:text-white">About Us</a></li>
+                <li><a href="#Products" className="text-gray-400 hover:text-white">Services</a></li>
+                <li><a href="#Products" className="text-gray-400 hover:text-white">Products</a></li>
+                <li><a href="#Contact-Us" className="text-gray-400 hover:text-white">Contact Us</a></li>
               </ul>
             </div>
             {/* Office Information */}
             <div>
               <h1 className="text-2xl font-semibold mb-4 tracking-widest">Office</h1>
               <ul className="space-y-2 text-gray-400">
-                <li>Email: <a href="mailto:the.raj2301@gmail.com" className="hover:text-white">the.raj2301@gmail.com</a></li>
-                <li>Phone: <a href="tel:+917738339185" className="hover:text-white">7738339185</a></li>
+                <li>Email: <a href="mailto:the.raj2301@gmail.com" className="hover:text-white">mantikenterprises24@gmail.com</a></li>
+                <li>Phone: <a href="tel:+917738339185" className="hover:text-white">+91 98706 15500</a></li>
                 <li>
                   Address: 
                   <p className="text-gray-400">
@@ -47,7 +47,7 @@ const Footer = () => {
         <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8 border-t border-gray-700 flex flex-col lg:flex-row justify-between items-center text-center text-gray-500 tracking-widest space-y-2 lg:space-y-0">
             <div>© 2024 Mantik Enterprises. All rights reserved.</div>
             <div>
-                Designed By: <a href="#" className="transition ease-in-out delay-200 hover:text-orange-500">the.raj2301</a>
+                Designed By: <a target='_blank' href="https://www.instagram.com/the.raj2301/" className="transition ease-in-out delay-200 hover:text-orange-500">the.raj2301</a>
             </div>
         </div>
 
