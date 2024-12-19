@@ -117,6 +117,10 @@ export default function Header() {
           ))}
         </div>
       </Disclosure.Panel>
+
+          {/* Scroll indicator above navbar */}
+          <div className="scroll_indicator fixed top-0 h-[0.1rem] md:h-[1px] z-50 bg-yellow-500"></div>
+
     </Disclosure>
   );
 }

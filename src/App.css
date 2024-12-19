@@ -7,3 +7,14 @@
 html {
   scroll-behavior: smooth;
 }
+.scroll_indicator{
+  width: 0;
+  animation: scroll_progress_bar linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll_progress_bar{
+  to{
+    width: 100%;
+  }
+}
