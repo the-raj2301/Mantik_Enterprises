@@ -1,8 +1,8 @@
-import React,  { useRef } from "react";
+import React,  { useRef, useState } from "react";
 import { PiBuildingOffice } from "react-icons/pi";
 import { MdLocalPhone } from "react-icons/md";
 import { IoMailSharp } from "react-icons/io5";
-import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import StyledMap from "./StyledMap";
 
@@ -17,12 +17,26 @@ const Contact = () => {
   const size = {
     width: '100%',
     height: '375px',
-}
+  }
+
+const [errors, setErrors] = useState({});
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const { firstname, email, tel} = form.current;
+
+    const newErrors = {
+      firstname: !firstname.value.trim(),
+      email: !email.value.trim(),
+      tel: !tel.value.trim(),
+    };
   
-    emailjs
+    setErrors(newErrors);
+
+    const hasErrors = Object.values(newErrors).some((val) => val);
+  
+    if(!hasErrors){
+      emailjs
       .sendForm('service_0d29e67', 'template_3t8y9b3', form.current, 'YN4ZM5IV00gbtojAK')
       .then(
         () => {
@@ -33,12 +47,13 @@ const Contact = () => {
           alert('Failed to send the message, please try again.'); // Error message
         },
       );
+    }
   };  
   return (
     <div id="Contact-Us" className="m-auto max-w-7xl font-jost tracking-wide mb-20 px-4 sm:px-10 lg:px-8 text-gray-300">
       <div className="my-10">
         <h1 className="text-center text-5xl md:text-8xl font-bold text-gray-200 hover:text-white border-b pb-5 border-gray-700">Contact Us</h1>
-        <p className="text-center text-2xl sm:text-xl mt-2">We'd <FaRegHeart className="inline"/> to help!</p>
+        <p className="text-center text-2xl sm:text-xl mt-2">We'd <FaHeart className="inline text-white hover:text-red-600 transition-all duration-300 ease-in-out"/> to help!</p>
       </div>
 
       <div className="m-auto lg:flex block gap-8">
@@ -51,7 +66,7 @@ const Contact = () => {
 
 
       <div className="lg:w-1/2 w-full px-2 lg:pr-10">
-        <h1 className="text-2xl md:text-4xl font-semibold text-white">Get In Touch</h1>
+        <h1 className="text-2xl md:text-4xl font-semibold text-white animate-once animate-ease-linear animate-normal">Get In Touch</h1>
         <div className="text-lg text-gray-400 mt-4 tracking-normal">
           <p>
           At Mantik Enterprises, we provide premium glass solutions, including V-Groove Engraving, CEP, Beveling, Decorative Laminated Glass, Mirrors, Smart Glass, Toughened Glass, and Bend Glass, designed to enhance any space with style and durability.
@@ -141,8 +156,8 @@ const Contact = () => {
 
                 {/* ----------------------------------- Email ID -------------------------------- */}
 
-          <div className="my-5 lg:my-10">
-            <label htmlFor="email" className="block text-lg mb-2 text-gray-100">
+          <div className="my-5 lg:my-10"> 
+            <label htmlFor="email" className={`block text-lg mb-2 text-gray-100 ${errors.email ? "after:content-['*'] after:ml-0.5 after:text-red-500" : ""}`}>
               Email
             </label>
             <input
@@ -150,7 +165,8 @@ const Contact = () => {
               id="email"
               name="email"
               autoComplete="email"
-              required
+              placeholder="you@example.com"
+              
               className="w-full bg-[#252526] block rounded-md py-2 px-4 text-gray-100 ring-1 ring-gray-700 focus:ring-2 focus:ring-indigo-600 outline-none sm:text-sm"
             />
           </div>
@@ -160,7 +176,7 @@ const Contact = () => {
 
 
           <div className="my-5 lg:my-10">
-            <label htmlFor="tel" className="block text-lg mb-2 text-gray-100">
+            <label htmlFor="tel" className={`block text-lg mb-2 text-gray-100 ${errors.tel ? "after:content-['*'] after:ml-0.5 after:text-red-500" : ""}`}>
               Phone Number
             </label>
             <input
@@ -188,7 +204,7 @@ const Contact = () => {
             ></textarea>
           </div>
 
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-right">
             <button
               type="submit"
               className="rounded-md px-8 py-2 mt-4 bg-[#111111] ring-1 ring-gray-700 text-lg text-gray-300 hover:text-white hover:ring-1 hover:ring-sky-600 transition-all ease-in-out delay-200"

@@ -8,8 +8,8 @@ import About from './components/About';
 import Contact from './components/Contact';
 import StyledMap from './components/StyledMap';
 import Products from './components/Products';
-
-
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -70,21 +70,26 @@ function App() {
       {/* Scroll to Top Button */}
       {isVisible && (
       <button
-        className="w-12 h-12 fixed bottom-10 right-10 flex items-center justify-center rounded-md bg-gray-900  text-cyan-400 border border-gray-700 shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 ease-in-out"
+        className="w-10 h-10 fixed md:bottom-10 bottom-5 md:right-10 right-5 flex items-center justify-center rounded-md bg-transparent backdrop-blur-md  text-cyan-400 border border-slate-700 shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 ease-in-out"
         onClick={HandleScrollTop}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
-        </svg>
-      </button>
-      )}
+
+        <MdOutlineKeyboardArrowUp className='h-6 w-6' />
+
+      </button>)}
+      
+      {/* Whatsapp Button */}
+
+      <a
+        href="https://wa.me/+919870615500"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-10 h-10 fixed md:bottom-24 bottom-20 md:right-10 right-5 flex items-center justify-center rounded-md border bg-transparent backdrop-blur-md border-slate-700 text-green-500 shadow-lg hover:shadow-green-500/50 transition-all duration-300 ease-in-out"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp className="w-8 h-8" />
+      </a>
+
     </div>
   );
 }
