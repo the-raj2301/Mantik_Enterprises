@@ -70,7 +70,7 @@ function App() {
       {/* Scroll to Top Button */}
       {isVisible && (
       <button
-        className="w-10 h-10 fixed md:bottom-10 bottom-5 md:right-10 right-5 flex items-center justify-center rounded-md bg-transparent backdrop-blur-md  text-cyan-400 border border-slate-700 shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 ease-in-out"
+        className="w-10 h-10 z-50 fixed md:bottom-10 bottom-5 md:right-10 right-5 flex items-center justify-center rounded-md bg-transparent backdrop-blur-md  text-cyan-400 border border-slate-700 shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 ease-in-out"
         onClick={HandleScrollTop}
       >
 
@@ -84,7 +84,7 @@ function App() {
         href="https://wa.me/+919870615500"
         target="_blank"
         rel="noopener noreferrer"
-        className="w-10 h-10 fixed md:bottom-24 bottom-20 md:right-10 right-5 flex items-center justify-center rounded-md border bg-transparent backdrop-blur-md border-slate-700 text-green-500 shadow-lg hover:shadow-green-500/50 transition-all duration-300 ease-in-out"
+        className="w-10 h-10 z-50 fixed md:bottom-24 bottom-20 md:right-10 right-5 flex items-center justify-center rounded-md border bg-transparent backdrop-blur-md border-slate-700 text-green-500 shadow-lg hover:shadow-green-500/50 transition-all duration-300 ease-in-out"
         aria-label="Chat on WhatsApp"
       >
         <FaWhatsapp className="w-8 h-8" />

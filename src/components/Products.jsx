@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductCarousel from './ProductCarousel';
 
 const Card = ({ image, title, subtitle }) => {
   return (
@@ -22,8 +23,11 @@ const Products = () => {
         >
             <h1 className="text-4xl md:text-8xl font-bold text-white border-b pb-5 border-gray-700">Products</h1>
         </div>
+        <div className="text-left px-10 py-2 text-2xl"><h1>Our Work</h1></div>
+        <div className="px-10"><ProductCarousel/></div>
+        <div className="text-left px-10 pt-5 text-2xl"><h1>Wall Panelling</h1></div>
 
-        <div className='p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'>
+        <div className='p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'>
 
             {/* Card Section */}
 
