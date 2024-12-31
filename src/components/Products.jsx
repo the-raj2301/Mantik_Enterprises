@@ -23,7 +23,7 @@ const Products = () => {
         >
             <h1 className="text-4xl md:text-8xl font-bold text-white border-b pb-5 border-gray-700">Products</h1>
         </div>
-        <div className="text-left px-10 py-2 text-2xl"><h1>Our Work</h1></div>
+        <div className="text-left px-10 py-2 text-2xl"><h1>Photo Gallery</h1></div>
         <div className="px-10"><ProductCarousel/></div>
         <div className="text-left px-10 pt-5 text-2xl"><h1>Wall Panelling</h1></div>
 

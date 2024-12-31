@@ -5,4 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/Mantik_Enterprises/', // Ensure this matches the GitHub repository name
   plugins: [react()],
+  resolve: {
+    alias: {
+      $: 'jquery',
+      jQuery: 'jquery',
+    },
+  },
 })

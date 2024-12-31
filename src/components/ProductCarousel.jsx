@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import PhotoSwipeLightbox from 'photoswipe/lightbox';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import 'photoswipe/style.css';
+import 'magnific-popup/dist/magnific-popup.css';
+
+import $ from 'jquery'; // Ensure jQuery is installed: npm install jquery
+import 'magnific-popup';
 
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 
@@ -23,37 +25,18 @@ export default function ProductCarousel() {
   ];
 
   useEffect(() => {
-    const loadImageDimensions = async () => {
-      const imageData = await Promise.all(
-        images.map((src) => {
-          return new Promise((resolve) => {
-            const img = new Image();
-            img.onload = () => resolve({ src, w: img.width, h: img.height });
-            img.src = src;
-          });
-        })
-      );
-
-      const lightbox = new PhotoSwipeLightbox({
-        gallery: '#gallery--zoom-transition',
-        children: 'img',
-        showHideAnimationType: 'zoom',
-        pswpModule: () => import('photoswipe'),
-        dataSource: imageData,
-      });
-
-      lightbox.init();
-
-      return () => lightbox.destroy();
-    };
-
-    loadImageDimensions();
-  }, [images]);
+    // Initialize Magnific Popup
+    $('#product-swiper img').magnificPopup({
+      type: 'image',
+      gallery: {
+        enabled: true, // Enables gallery mode
+      },
+    });
+  }, []);
 
   return (
-    <>
+    <div id="product-swiper">
       <Swiper
-        id="gallery--zoom-transition"
         slidesPerView={1}
         spaceBetween={20}
         freeMode={true}
@@ -91,12 +74,12 @@ export default function ProductCarousel() {
             <img
               src={src}
               alt={`Image ${index + 1}`}
-              data-pswp-index={index}
               className="w-full cursor-pointer"
+              data-mfp-src={src} // Magnific Popup uses this attribute
             />
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 }

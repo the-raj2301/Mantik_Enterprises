@@ -31,8 +31,8 @@ const Footer = () => {
             <div>
               <h1 className="text-2xl font-semibold mb-4 tracking-widest">Office</h1>
               <ul className="space-y-2 text-gray-400">
-                <li>Email: <a href="mailto:the.raj2301@gmail.com" className="hover:text-white">mantikenterprises24@gmail.com</a></li>
-                <li>Phone: <a href="tel:+917738339185" className="hover:text-white">+91 98706 15500</a></li>
+                <li>Email: <a href="mailto:mantikenterprises24@gmail.com" className="hover:text-white">mantikenterprises24@gmail.com</a></li>
+                <li>Phone: <a href="tel:+919870615500" className="hover:text-white">+91 98706 15500</a></li>
                 <li>
                   Address: 
                   <p className="text-gray-400">
