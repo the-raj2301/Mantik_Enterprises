@@ -35,7 +35,7 @@ const Footer = () => {
                 <li>Phone: <a href="tel:+919870615500" className="hover:text-white">+91 98706 15500</a></li>
                 <li>
                   Address: 
-                  <p className="text-gray-400">
+                  <p className="text-gray-400 select-all">
                     Unit NO: 1, Ghaswala Estate, Swami Vivekananda Rd, opp. 24 Karat, Jogeshwari West, Mumbai-400102
                   </p>
                 </li>
@@ -47,7 +47,7 @@ const Footer = () => {
         <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8 border-t border-gray-700 flex flex-col lg:flex-row justify-between items-center text-center text-gray-500 tracking-widest space-y-2 lg:space-y-0">
             <div>© 2024 Mantik Enterprises. All rights reserved.</div>
             <div>
-                Designed By: <a target='_blank' href="https://www.instagram.com/the.raj2301/" className="transition ease-in-out delay-200 hover:text-orange-500">the.raj2301</a>
+                Designed By: <a target='_blank' href="https://www.instagram.com/the.raj2301/" className="transition ease-in-out delay-200 text-orange-500 hover:text-red-500">the.raj2301</a>
             </div>
         </div>
 
