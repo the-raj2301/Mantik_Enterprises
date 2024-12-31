@@ -6,7 +6,7 @@ const Card = ({ image, title, subtitle }) => {
     <div className='w-full bg-[#252526] p-6 rounded-lg font-jost 
       hover:shadow-[0_4px_20px_#e47025b0] hover:scale-105 
       transition-transform duration-300'>
-      <img className='w-full md:h-64 object-cover rounded-md' src={image} alt={title} loading='lazy'/>
+      <img className='w-full md:h-64 object-cover rounded-md hover:scale-105' src={image} alt={title} loading='lazy'/>
       <h1 className='text-2xl font-bold pt-4 text-white tracking-wide'>{title}</h1>
       <h2 className='text-lg text-gray-400'>{subtitle}</h2>
     </div>
@@ -25,7 +25,7 @@ const Products = () => {
         </div>
         <div className="text-left px-10 py-2 text-2xl"><h1>Photo Gallery</h1></div>
         <div className="px-10"><ProductCarousel/></div>
-        <div className="text-left px-10 pt-5 text-2xl"><h1>Wall Panelling</h1></div>
+        <div className="text-left px-10 pt-5 text-2xl"><h1>Produts</h1></div>
 
         <div className='p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'>
 
